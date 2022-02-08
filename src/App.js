@@ -30,7 +30,7 @@ import Part24b from "./Mycomponents/Part24b";
 import Part25 from "./Mycomponents/Part25";
 import Part26 from "./Mycomponents/Part26";
 import Part27 from "./Mycomponents/Part27";
-import Part28 from "./Mycomponents/Part28";
+// import Part28 from "./Mycomponents/Part28";
 import Part29 from "./Mycomponents/Part29";
 import Part30 from "./Mycomponents/Part30";
 import Part31 from "./Mycomponents/Part31";
@@ -91,7 +91,7 @@ function apple(){
    <Part25/>   {/* HOC (Higher Order Component) */}
     <Router><Part26/> </Router> {/*  Routing */}
     <Part27/>    {/* Dynamic routing */}
-    <Part28/>   {/* GET METHOD in API*/}
+    {/* <Part28/>   GET METHOD in API */}
     <Part29/>   {/* POST METHOD in API*/}    {/*******  VERY VERY IMP ***********/}
     <Part30/>   {/* previous state */}
     <Part31/>    {/* previous props */}
@@ -100,4 +100,4 @@ function apple(){
   )
 }
 
-export default App
+export default App;
