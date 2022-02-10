@@ -59,7 +59,8 @@ const App = () => {
   },
 ]);
 function apple(){
-  alert("props as fucntion alert statement");
+  document.write("nice");
+  alert("completed");
 }
   return (
     <>

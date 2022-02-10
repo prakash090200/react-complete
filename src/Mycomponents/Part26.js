@@ -4,7 +4,7 @@ import Part26b from './Part26b'
 import Part26c from './Part26c'
 import Part26d from './Part26d'
 
-import {Route} from 'react-router-dom'
+import {Route,Switch} from 'react-router-dom'
 /* import {Routes} from 'react-router' */
 /* import {BrowserRouter as Router} from 'react-router-dom' */
 
@@ -25,17 +25,11 @@ export default function Part26() {
                 {/* ******OR****  */}
          
               <Part26a/>                                                  {/* Link page */}
-              
-            
+              <Switch>
               <Route path="/" exact={true}  ><Part26b/></Route>        {/* Home Page */}
               <Route path="/about" ><Part26c/></Route>                {/* About Page */}
-              <Route path="*" ><Part26d/></Route>                     {/* 404 page not found */}
-              
-              
-          
-          
-
-
+              <Route path="*" ><Part26d/></Route>                 {/* 404 page not found */}
+             </Switch>
         </div>
     )
 }
