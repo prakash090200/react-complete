@@ -10,10 +10,11 @@ function Part28() {
   let [id,setId] =useState(null)
   
   useEffect(()=>{
-    //console.warn("nice88888888888888888888888888888888888888888")
+    
     getnow()
-  },[])
+  },[])  /*imp*/
 
+  //FETCHING THE DATA FROM SERVER (GET)
   function getnow(){
     
     fetch("http://localhost:3002/user")
@@ -21,14 +22,14 @@ function Part28() {
     .then((respond) => {
         
         setUser(respond)  
-        setName(respond[0].name)  
-        setEmail(respond[0].email) 
-        setCountry(respond[0].country)
-        setId(respond[0].id)     
+        setName("")  
+        setEmail("") 
+        setCountry("")
+        setId(null)      
     })
   }
 
-
+// DELETEING THE DATA  (DELETE)
   function deletee(id){
      
     fetch(`http://localhost:3002/user/${id}`,{
@@ -45,12 +46,14 @@ function Part28() {
   function edit(id){
    
     let temp=users[id-1];
+   
     setName(temp.name)
     setEmail(temp.email)
     setCountry(temp.country)
     setId(temp.id)
   }
-  
+
+  /// UPDATING THE DATA (PUT)
   function updatenow(){
      //console.warn(name,email,country)
      let store={name,email,country}
@@ -67,12 +70,37 @@ function Part28() {
      .then((respond)=>{
 
       console.warn(respond);
+
         getnow();
      }
 
 
      )
     }
+
+/// POSTING THE DATA (POST)
+    function postnow(){
+      
+      let store={name,email,country}
+      fetch(`http://localhost:3002/user`,{
+        method:'Post',
+        headers:{
+         'Accept':'application/json',
+         'Content-Type':'application/json'
+     },
+     body:JSON.stringify(store)
+        }
+      )
+      .then((result)=> result.json())
+      .then((respond)=>{
+ 
+       
+         getnow();
+      }
+ 
+ 
+      )
+     }
 
   return (
     <div className="Part28">
@@ -111,7 +139,7 @@ function Part28() {
          Email:   <input type="text" value={email}    onChange={(e)=>setEmail(e.target.value)}/><br></br>
          Country :<input type="text" value={country}  onChange={(e)=>setCountry(e.target.value)}/><br></br>
           <br></br>
-          <Button onClick={updatenow}>Update </Button>
+          <Button onClick={id==null?postnow:updatenow}>Update/Submit </Button>   {/* IMP */}
 
         </div>
     </div>

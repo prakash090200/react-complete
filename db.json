@@ -6,14 +6,48 @@
       "author": "typicode"
     }
   ],
-  "comments": [
+  "user": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Prakash Kumar",
+      "email": "pk@gmail.com",
+      "country": "indiaaaaa",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Anil Kumari",
+      "email": "anu@gmail.com",
+      "country": "Aus"
+    },
+    {
+      "id": 3,
+      "name": "LOL Kumari",
+      "email": "lol@gmail.com",
+      "country": "japan"
+    },
+    {
+      "name": "priya",
+      "email": "py@gmail.com",
+      "country": "GYiaaaaaa",
+      "id": 4
+    },
+    {
+      "name": "Akash",
+      "email": "Akkash@gmail.com",
+      "country": "india",
+      "id": 5
+    },
+    {
+      "name": "Chandana Kumari",
+      "email": "candu@gmail.com",
+      "country": "India",
+      "id": 6
+    },
+    {
+      "name": "Ravi kumar",
+      "email": "rav@gmail.com",
+      "country": "Singapore",
+      "id": 7
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
