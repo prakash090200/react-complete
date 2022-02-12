@@ -1,5 +1,5 @@
 import React from 'react'
-import {withRouter} from 'react-router-dom' 
+import {withRouter} from 'react-router-dom'  
 
 
 function Part27a(prop){
@@ -10,7 +10,7 @@ function Part27a(prop){
     
         <h6>Hey</h6>
         <b>Part27b dynamic routing </b>
-        <p>getting dynamic id from user: <b>{prop.match.params.id}</b></p>
+        <p>getting dynamic id from user: <b>{prop.match.params.id}</b></p>  {/* Taking id from path={"/user/:id"} as a  prop */}
         </div>
     )
 }

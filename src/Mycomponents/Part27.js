@@ -14,7 +14,7 @@ export default function Part27() {
         <Router>
         {
             users.map((item)=>
-          <div> <Link to={"/user/"+item.id}>{item.name}</Link></div>
+          <div> <Link to={"/user/"+item.id+"/"+item.name}>{item.name}</Link></div>
             )
         }
         
